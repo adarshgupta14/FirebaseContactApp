@@ -19,4 +19,5 @@ const Modal = ({ onClose, isOpen, children }) => {
     , document.getElementById("modal-root"))
 }
 
+
 export default Modal
