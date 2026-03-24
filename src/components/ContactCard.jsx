@@ -29,8 +29,20 @@ const ContactCard = ({contact}) => {
                 </div>
             </div>
             <div className="flex text-3xl">
-                <RiEditCircleLine onClick={onOpen} className="cursor-pointer"/>
-                <IoMdTrash onClick={()=> deleteContact(contact.id)} className="text-orange cursor-pointer"/>
+                <RiEditCircleLine 
+                    onClick={onOpen} 
+                    className="cursor-pointer"
+                    role="button"
+                    aria-label="Edit Contact"
+                    data-testid="edit-contact"
+                />
+                <IoMdTrash 
+                    onClick={()=> deleteContact(contact.id)} 
+                    className="text-orange cursor-pointer"
+                    role="button"
+                    aria-label="Delete Contact"
+                    data-testid="delete-contact"
+                />
             </div>
         </div>
         <AddAndUpdateContact contact={contact} isUpdate isOpen={isOpen} onClose={onClose}/>
